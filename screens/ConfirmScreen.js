@@ -2,16 +2,19 @@ import { View, Text, Modal, StyleSheet, Button } from "react-native";
 import React from "react";
 import { styles } from "../styles/styles";
 import BasicButton from "../components/ButtonComponent";
+import TextDisplayed from "../components/TextComponent";
+import ConfirmInfo from "../components/ConfirmInfo";
 
 const ConfirmScreen = ({ modalVisible, onGoback }) => {
   return (
     <Modal visible={modalVisible}>
       <View style={[styles.container, { justifyContent: "center" }]}>
         <View style={styles.card}>
-          <Text>You have entered:</Text>
-          <Text>Email</Text>
-          <Text>phone</Text>
-          <Text>Please confirm they are correct</Text>
+          {/* <TextDisplayed text={"You have entered:"} />
+          <TextDisplayed text={"Email"} />
+          <TextDisplayed text={"phone"} />
+          <TextDisplayed text={"Please confirm they are correct."} /> */}
+          <ConfirmInfo />
           <View style={confirmStyles.buttonContainer}>
             <BasicButton
               btnTitle={"Go back"}

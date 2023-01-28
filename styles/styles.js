@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
   },
-  inputLabel: {
+  text: {
     width: "100%",
     color: rebeccapurple,
-    marginVertical: 10,
+    fontSize: 18,
   },
   inputField: {
     width: "100%",
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     justifyContent: "space-around",
   },
+
   button: {
     padding: 5,
   },
