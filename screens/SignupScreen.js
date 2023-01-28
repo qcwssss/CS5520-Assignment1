@@ -11,11 +11,15 @@ const Register = () => {
     setSigupClicked(true);
   };
 
+  const onGoback = () => {
+    setSigupClicked(false);
+  };
+
   return (
     <View style={styles.container}>
       <SignupHeader />
       <InputCard onSignup={onSignup} />
-      <ConfirmScreen modalVisible={sigupClicked} />
+      <ConfirmScreen modalVisible={sigupClicked} onGoback={onGoback} />
     </View>
   );
 };

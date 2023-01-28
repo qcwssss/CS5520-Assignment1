@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 3,
     },
+    elevation: 2,
   },
   confirmCard: {
     alignSelf: "center",
