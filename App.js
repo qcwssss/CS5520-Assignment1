@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native";
-import ConfirmScreen from "./screens/ConfirmScreen";
-import Register from "./screens/SignupScreen";
+import ConfirmScreen from "./screens/Confirm";
+import Register from "./screens/Starting";
 import { styles } from "./styles/styles";
 
 export default function App() {

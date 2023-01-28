@@ -4,29 +4,25 @@ import { styles } from "../styles/styles";
 import BasicButton from "./ButtonComponent";
 import InputField from "./InputField";
 
-const InputCard = ({ onSignup }) => {
-  const [email, setEmail] = useState("");
+const alertMessage = (type) => {
+  return `Please enter a valid ${type}.`;
+};
+
+const InputCard = ({ onSignup, email, phone, setEmail, setPhone }) => {
   const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!emailRegex.test(email)) {
-      setEmailError("Please enter a valid email");
-    } else {
-      setEmailError("");
-    }
+    if (!emailRegex.test(email)) setEmailError(alertMessage("email"));
+    else setEmailError("");
   };
-
-  const [phone, setPhone] = useState("");
-  const [phoneError, setPhoneError] = useState("");
 
   const validatePhoneNumber = (phoneNumber) => {
     var phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phoneNumber)) {
-      setPhoneError("Please enter a valid phone number");
-    } else {
-      setPhoneError("");
-    }
+    if (!phoneRegex.test(phoneNumber))
+      setPhoneError(alertMessage("phone number"));
+    else setPhoneError("");
   };
 
   const reset = () => {

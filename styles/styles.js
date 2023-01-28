@@ -4,13 +4,37 @@ const { width, height } = Dimensions.get("screen");
 
 const rebeccapurple = "rebeccapurple";
 
+const container = {
+  flex: 1,
+  alignItems: "center",
+  backgroundColor: "#F5FCFF",
+  padding: 10,
+  width: "100%",
+};
+
+const card = {
+  marginTop: 20,
+  backgroundColor: "white",
+  width: "80%",
+  padding: 20,
+  borderRadius: 5,
+  shadowColor: "#000",
+  shadowOpacity: 0.2,
+  shadowRadius: 5,
+  shadowOffset: {
+    width: 0,
+    height: 3,
+  },
+  elevation: 2,
+};
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
-    padding: 10,
-    width: "100%",
+    ...container,
+  },
+  centeredContainer: {
+    ...container,
+    justifyContent: "center",
   },
   header: {
     marginTop: 20,
@@ -31,19 +55,12 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   card: {
-    marginTop: 20,
-    backgroundColor: "white",
-    width: "80%",
-    padding: 20,
-    borderRadius: 5,
-    shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    elevation: 2,
+    ...card,
+  },
+  finsihCard: {
+    ...card,
+    marginTop: 80,
+    width: "90%",
   },
   confirmCard: {
     alignSelf: "center",
