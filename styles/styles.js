@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   card: {
     marginTop: 20,
     backgroundColor: "white",
-    width: "70%",
+    width: "80%",
     padding: 20,
     borderRadius: 5,
     shadowColor: "#000",
@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
       width: 0,
       height: 3,
     },
+  },
+  confirmCard: {
+    alignSelf: "center",
   },
   inputContainer: {
     marginTop: 5,
