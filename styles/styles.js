@@ -7,14 +7,13 @@ const rebeccapurple = "rebeccapurple";
 const container = {
   flex: 1,
   alignItems: "center",
-  backgroundColor: "#F5FCFF",
-  padding: 10,
+  padding: 20,
   width: "100%",
 };
 
 const card = {
   marginTop: 20,
-  backgroundColor: "white",
+  backgroundColor: "#dcdcdc",
   width: "80%",
   padding: 20,
   borderRadius: 5,
@@ -62,6 +61,12 @@ const styles = StyleSheet.create({
     marginTop: 80,
     width: "90%",
   },
+  laterCard: {
+    ...card,
+    marginTop: 80,
+    width: "60%",
+    alignItems: "center",
+  },
   confirmCard: {
     alignSelf: "center",
   },
@@ -97,6 +102,15 @@ const styles = StyleSheet.create({
   },
   error: {
     color: "grey",
+  },
+  bgContainer: {
+    flex: 1,
+    paddingVertical: 20,
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: height,
   },
 });
 

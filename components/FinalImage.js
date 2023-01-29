@@ -5,7 +5,7 @@ const getLastFourDigits = (phoneNumber) => {
   if (typeof phoneNumber === "string" && phoneNumber.length === 10) {
     return phoneNumber.slice(-1);
   } else {
-    // test only, this line won't execute from starting screen.
+    // test only, this line won't execute if start from sign up screen.
     return "10";
   }
 };
@@ -15,14 +15,14 @@ const getImageUrl = (phone) => {
   return { uri: `https://picsum.photos/id/${lastDigit}/100/100` };
 };
 
-const ImageInFinishScreen = ({ phone }) => {
+const ImageInFinishScreen = ({ phone, isLater }) => {
   const img = getImageUrl(phone);
   //   console.log(img);
   return (
     <View style={imgStyles.imageContainer}>
       <Image
         style={imgStyles.image}
-        source={img}
+        source={isLater ? require("../assets/images/smile.png") : img}
         //   source={require("../assets/images/smile.png")}
       />
     </View>

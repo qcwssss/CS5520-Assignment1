@@ -21,9 +21,9 @@ const FinishCard = ({ isLater, phone }) => {
   const message = getFinishContent(isLater);
 
   return (
-    <View style={styles.finsihCard}>
+    <View style={isLater ? styles.laterCard : styles.finsihCard}>
       <TextDisplayed text={message} />
-      <ImageInFinishScreen phone={phone} />
+      <ImageInFinishScreen phone={phone} isLater={isLater} />
     </View>
   );
 };

@@ -3,6 +3,7 @@ import React from "react";
 import { styles } from "../styles/styles";
 import BasicButton from "../components/ButtonComponent";
 import ConfirmInfo from "../components/ConfirmInfo";
+import LinearBackground from "../components/backgroud";
 
 const ConfirmScreen = ({
   modalVisible,
@@ -15,6 +16,7 @@ const ConfirmScreen = ({
   return (
     <Modal visible={modalVisible}>
       <View style={styles.centeredContainer}>
+        <LinearBackground />
         <View style={styles.card}>
           <ConfirmInfo email={email} phone={phone} />
           <View style={confirmStyles.buttonContainer}>
