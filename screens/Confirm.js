@@ -10,6 +10,7 @@ const ConfirmScreen = ({
   email,
   phone,
   onConfirmInfo,
+  onClickLater,
 }) => {
   return (
     <Modal visible={modalVisible}>
@@ -23,7 +24,7 @@ const ConfirmScreen = ({
               onClick={onGoback}
             />
             <BasicButton btnTitle={"Confirm"} onClick={onConfirmInfo} />
-            <BasicButton btnTitle={"Finish later"} />
+            <BasicButton btnTitle={"Finish later"} onClick={onClickLater} />
           </View>
         </View>
       </View>

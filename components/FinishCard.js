@@ -2,37 +2,30 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 import { styles } from "../styles/styles";
 import TextDisplayed from "../components/TextComponent";
+import ImageInFinishScreen from "./FinalImage";
 
-const FinishCard = ({ phone }) => {
-  let source = {
-    uri: "https://picsum.photos/id/1024/100/100",
-  };
+const getFinishContent = (isLater) => {
+  let message;
+  if (isLater) {
+    message = "Sorry to see you go.";
+  } else {
+    message =
+      "Thank you for signing up. \n" +
+      "Here's a picture for you " +
+      "(based on the last digit of your phone number).";
+  }
+  return message;
+};
 
-  const message =
-    "Thank you for signing up. \n" +
-    "Here's a picture for you " +
-    "(based on the last digit of your phone number).";
+const FinishCard = ({ isLater, phone }) => {
+  const message = getFinishContent(isLater);
 
   return (
     <View style={styles.finsihCard}>
       <TextDisplayed text={message} />
-      <View style={imgStyles.center}>
-        <Image style={imgStyles.image} source={source} />
-      </View>
+      <ImageInFinishScreen phone={phone} />
     </View>
   );
 };
-
-const imgStyles = StyleSheet.create({
-  image: {
-    height: 100,
-    width: 100,
-  },
-  center: {
-    padding: 15,
-    alignSelf: "center",
-    alignItems: "center",
-  },
-});
 
 export default FinishCard;

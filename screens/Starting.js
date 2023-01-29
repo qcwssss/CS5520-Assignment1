@@ -30,6 +30,7 @@ const StartingScreen = () => {
 
   const onClickLater = () => {
     setLater(true);
+    onGoback();
   };
 
   const onStartAgain = () => {
@@ -56,6 +57,7 @@ const StartingScreen = () => {
         phone={phone}
         onGoback={onGoback}
         onConfirmInfo={onConfirmInfo}
+        onClickLater={onClickLater}
       />
       <FinishScreen
         modalVisible={confirmClicked || later}
