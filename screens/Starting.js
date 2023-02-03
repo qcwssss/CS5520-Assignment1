@@ -5,7 +5,6 @@ import { styles } from "../styles/styles";
 import SignupHeader from "../components/Header";
 import ConfirmScreen from "./Confirm";
 import FinishScreen from "./Finish";
-import LinearBackground from "../components/backgroud";
 import { LinearGradient } from "expo-linear-gradient";
 
 const StartingScreen = () => {
@@ -25,21 +24,21 @@ const StartingScreen = () => {
   };
 
   const onConfirmInfo = () => {
-    setConfirmClicked(true);
     onGoback();
+    setConfirmClicked(true);
   };
 
   const onClickLater = () => {
-    setLater(true);
     onGoback();
+    setLater(true);
   };
 
   const onStartAgain = () => {
-    setEmail("");
-    setPhone("");
     onGoback();
     setConfirmClicked(false);
     setLater(false);
+    setEmail("");
+    setPhone("");
   };
 
   return (
